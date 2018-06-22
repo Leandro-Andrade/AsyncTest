@@ -5,16 +5,16 @@ build:
   steps:    
     - script:
         name: restore
-        cwd: /src/Evision
+        cwd: src/Evision
         code: |
           dotnet restore
     - script:
         name: build
-        cwd: /src/Evision
+        cwd: src/Evision
         code: |
           dotnet build --no-restore
     - script:
         name: publish
-        cwd: /src/Evision
+        cwd: src/Evision
         code: |
           dotnet publish -c Release -o publish
