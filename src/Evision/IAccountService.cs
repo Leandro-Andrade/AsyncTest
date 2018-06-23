@@ -1,7 +1,9 @@
-﻿namespace Evision
+﻿using System.Threading.Tasks;
+
+namespace Evision
 {
     public interface IAccountService
     {
-        double GetAccountAmount(int accountId);
+        Task<double> GetAccountAmountAsync(int accountId);
     }
 }

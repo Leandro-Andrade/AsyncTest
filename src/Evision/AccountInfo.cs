@@ -1,4 +1,6 @@
-﻿namespace Evision
+﻿using System.Threading.Tasks;
+
+namespace Evision
 {
     public class AccountInfo
     {
@@ -13,9 +15,9 @@
 
         public double Amount { get; private set; }
 
-        public void RefreshAmount()
+        public async Task RefreshAmountAsync()
         {
-            Amount = _accountService.GetAccountAmount(_accountId);
+            Amount = await _accountService.GetAccountAmountAsync(_accountId);
         }
     }
 }
