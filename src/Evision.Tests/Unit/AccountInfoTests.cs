@@ -1,9 +1,10 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using NSubstitute;
 using Xunit;
 
-namespace Evision.Tests
+namespace Evision.Tests.Unit
 {
     public class AccountInfoTests
     {
@@ -16,11 +17,11 @@ namespace Evision.Tests
             var accountServiceMock = Substitute.For<IAccountService>();
             accountServiceMock.GetAccountAmountAsync(accountId).Returns(expectedAmountAfterRefresh);
 
-            var accountInfo = new AccountInfo(accountId, accountServiceMock);
-            Assert.Equal(0, accountInfo.Amount);
+            var sut = new AccountInfo(accountId, accountServiceMock);
+            Assert.Equal(0, sut.Amount);
 
-            await accountInfo.RefreshAmountAsync();
-            Assert.Equal(expectedAmountAfterRefresh, accountInfo.Amount);
+            await sut.RefreshAmountAsync();
+            Assert.Equal(expectedAmountAfterRefresh, sut.Amount);
         }
     }
 }
