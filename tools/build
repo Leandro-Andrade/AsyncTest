@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 dotnet build ../src/Evision.sln
-dotnet test ../src/Evision.Tests/Evision.Tests.csproj
+dotnet test --no-build ../src/Evision.Tests/Evision.Tests.csproj
 dotnet pack ../src/Evision/Evision.csproj --output ./package

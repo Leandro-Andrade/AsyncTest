@@ -1,5 +1,5 @@
-box: microsoft/dotnet:2.0-sdk
-no-response-timeout: 10
+box: microsoft/dotnet:2.1-sdk
+no-response-timeout: 30
 
 build:
   steps:    
@@ -18,3 +18,10 @@ build:
         cwd: src/Evision
         code: |
           dotnet publish -c Release -o publish
+test:
+  steps:    
+    - script:
+        name: run-tests
+        cwd: src/Evision.Tests
+        code: |
+          dotnet test --no-build
