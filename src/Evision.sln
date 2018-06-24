@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evision", "Evision\Evision.csproj", "{B3361CD6-5154-4112-91B0-0F4667FB0721}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evision.Tests", "Evision.Tests\Evision.Tests.csproj", "{424DAFF9-04BD-4FC8-8AC6-6B0F5E7EEE2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evision.Tests", "Evision.Tests\Evision.Tests.csproj", "{424DAFF9-04BD-4FC8-8AC6-6B0F5E7EEE2A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evision.IntegrationTestClient", "Evision.ConsoleClient\Evision.IntegrationTestClient.csproj", "{801D1010-43DD-4526-A471-E82168D99D74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{424DAFF9-04BD-4FC8-8AC6-6B0F5E7EEE2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{424DAFF9-04BD-4FC8-8AC6-6B0F5E7EEE2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{424DAFF9-04BD-4FC8-8AC6-6B0F5E7EEE2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{801D1010-43DD-4526-A471-E82168D99D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{801D1010-43DD-4526-A471-E82168D99D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{801D1010-43DD-4526-A471-E82168D99D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{801D1010-43DD-4526-A471-E82168D99D74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
