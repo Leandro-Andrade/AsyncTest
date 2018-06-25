@@ -21,6 +21,16 @@ build:
 test:
   steps:    
     - script:
+        name: restore
+        cwd: src/Evision.Tests
+        code: |
+          dotnet restore
+    - script:
+        name: build
+        cwd: src/Evision.Tests
+        code: |
+          dotnet build --no-restore
+    - script:
         name: run-tests
         cwd: src/Evision.Tests
         code: |
