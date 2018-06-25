@@ -21,3 +21,12 @@
 	3. `dotnet pack` - Produces a NuGet package
 * Using a bash console, cd to /tools
 * Execute the script with `./build` command
+
+### Tests
+* There is a unit unit test for AccountInfo that mocks the service with NSubstitute and asserts it returns the expected result.
+* There is also an integration/acceptance test using xBehave just to make it clear when running that this is testing the callas are in fact asyncronously.
+* If you wish, you can also run the build at the CI (wercker) and it will run the tests as part of the build process.
+
+### Packing
+* The build script explained above will generate a NuGet Package of the class library under `./package` folder.
+
